@@ -418,6 +418,33 @@ h1 span:nth-child(21) { animation-delay: 1.9s; }
   .btn-primary:hover {
     background-color: #0056b3; /* Darker shade on hover */
   }
+/* Ensure the modal fits well on different screen sizes */
+.modal-dialog {
+    max-width: 90%; /* For smaller screens, limit modal width to 90% */
+    width: auto;
+    height: auto;
+    margin: 10px auto; /* Adds some space around the modal */
+}
+
+.modal-content {
+    width: 100%; /* Ensure modal content stretches to 100% of its container */
+    max-height: 90vh; /* Prevent modal from exceeding the viewport height */
+    overflow-y: auto; /* Enable scrolling if content exceeds height */
+}
+
+.modal-body img {
+    width: 100%; /* Ensure images fill the modal width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: Add rounded corners to the images */
+}
+
+/* For larger screens, you can maintain a maximum width */
+@media (min-width: 768px) {
+    .modal-dialog {
+        max-width: 600px; /* Set a max width for larger screens */
+    }
+}
+
 
   
 
