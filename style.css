@@ -417,32 +417,42 @@ h1 span:nth-child(21) { animation-delay: 1.9s; }
   .btn-primary:hover {
     background-color: #0056b3; /* Darker shade on hover */
   }
-/* Ensure the modal fits well on different screen sizes */
+/* General modal styles */
 .modal-dialog {
-    max-width: 90%; /* For smaller screens, limit modal width to 90% */
-    width: auto;
-    height: auto;
-    margin: 10px auto; /* Adds some space around the modal */
+    max-width: 100%; /* Ensure modal takes up full width on smaller screens */
+    margin: 10px auto; /* Add space around modal */
 }
 
 .modal-content {
-    width: 100%; /* Ensure modal content stretches to 100% of its container */
-    max-height: 90vh; /* Prevent modal from exceeding the viewport height */
-    overflow-y: auto; /* Enable scrolling if content exceeds height */
+    width: 100%;
+    max-width: 100%; /* Make modal content stretch across the entire screen */
+    max-height: 90vh; /* Set max height relative to the viewport */
+    overflow-y: auto; /* Allow scrolling if content exceeds the screen height */
+}
+
+.modal-body {
+    padding: 0; /* Remove extra padding to fit the image better */
 }
 
 .modal-body img {
-    width: 100%; /* Ensure images fill the modal width */
+    width: 100%; /* Image takes full modal width */
     height: auto; /* Maintain aspect ratio */
-    border-radius: 5px; /* Optional: Add rounded corners to the images */
+    border-radius: 5px; /* Optional rounded corners */
 }
 
-/* For larger screens, you can maintain a maximum width */
-@media (min-width: 768px) {
+/* Responsive media queries for small screens */
+@media (max-width: 768px) {
     .modal-dialog {
-        max-width: 600px; /* Set a max width for larger screens */
+        max-width: 90%; /* Reduce modal size slightly on smaller screens */
     }
 }
+
+@media (max-width: 576px) {
+    .modal-dialog {
+        max-width: 95%; /* Even smaller width for very small devices */
+    }
+}
+
 
 
   
