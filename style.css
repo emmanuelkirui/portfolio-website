@@ -411,8 +411,7 @@ h1 span:nth-child(21) { animation-delay: 1.9s; }
     border: none;
     border-radius: 5px;
     transition: background-color 0.3s;
-    justify-content: space-between;
-    position: relative;
+     margin: 10px 15px 10px 0; /* Adds spacing between the buttons */
   }
   
   .btn-primary:hover {
