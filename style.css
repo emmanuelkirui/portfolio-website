@@ -27,10 +27,17 @@ header {
     padding: 20px 0;
     text-align: center;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Glow effect for header */
+    word-wrap: break-word; /* Allows long words to break into a new line if necessary */
 }
 
 header h1 {
-    margin-bottom: 10px;
+     margin-bottom: 10px;
+    font-size: 3rem; /* Adjust the default font size */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the text */
+    color: transparent; /* Make text transparent for the glow effect */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Basic shadow for better visibility */
+    overflow-wrap: break-word; /* Prevent text overflow */
 }
 
 .navbar {
@@ -334,6 +341,10 @@ h1 span:nth-child(21) { animation-delay: 1.9s; }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem; /* Decrease font size on smaller screens */
+        text-shadow: none; /* Optionally remove the glow effect on smaller devices */
+    }
     .carousel-item img {
         height: auto; /* Maintain aspect ratio */
     }
@@ -343,6 +354,9 @@ h1 span:nth-child(21) { animation-delay: 1.9s; }
 }
 
 @media (max-width: 576px) {
+    header h1 {
+        font-size: 2rem; /* Further decrease font size on very small screens */
+    }
     .carousel-item {
         flex-direction: column; /* Stack images vertically on very small screens */
     }
@@ -380,6 +394,7 @@ h1 span:nth-child(21) { animation-delay: 1.9s; }
     border-radius: 5px;
     transition: background-color 0.3s;
     justify-content: space-between;
+    position: relative;
   }
   
   .btn-primary:hover {
