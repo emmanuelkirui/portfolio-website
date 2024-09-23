@@ -1,0 +1,11 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Open HTML File in Chrome",
+            "file": "C:/Users/EMMANUEL KIRUI/Desktop/portfolio-website/index.html"
+        }
+    ]
+}
