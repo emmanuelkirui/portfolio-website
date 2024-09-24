@@ -27,11 +27,10 @@ header {
     padding: 20px 0;
     text-align: center;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Glow effect for header */
-    word-wrap: break-word; /* Allows long words to break into a new line if necessary */
 }
 
 header h1 {
-     margin-bottom: 10px;
+    margin-bottom: 10px;
     font-size: 3rem; /* Adjust the default font size */
     display: flex; /* Use flexbox for layout */
     justify-content: center; /* Center the text */
@@ -149,6 +148,7 @@ h1 span:nth-child(21) { animation-delay: 1.9s; }
     border: 1px solid #dee2e6;
     border-radius: 5px;
     transition: transform 0.2s; /* Animation on hover */
+    animation: moveLight 3s linear infinite; /* Apply moving light animation */
 }
 
 .card:hover {
@@ -159,10 +159,13 @@ h1 span:nth-child(21) { animation-delay: 1.9s; }
 /* Sample code styling */
 .sample-code {
     background-color: #f8f9fa; /* Light background for code */
-    padding: 15px;
+    padding: 15px 0;
     border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
     overflow: auto; /* Allow scrolling if necessary */
     font-family: 'Courier New', Courier, monospace; /* Monospace font for code */
+    animation: moveLight 3s linear infinite; /* Apply moving light animation */
+    
 }
 
 /* Skills section styles */
@@ -171,6 +174,7 @@ h1 span:nth-child(21) { animation-delay: 1.9s; }
     padding: 40px 0; /* Add padding for spacing */
     border-radius: 5px; /* Rounded corners */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    animation: moveLight 3s linear infinite; /* Apply moving light animation */
 }
 
 #skills h2 {
@@ -228,6 +232,7 @@ h1 span:nth-child(21) { animation-delay: 1.9s; }
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow for images */
     width: 100%; /* Ensure images take full width of their container */
     height: auto; /* Maintain aspect ratio */
+    animation: moveLight 3s linear infinite; /* Apply moving light animation */
 }
 
 .carousel-inner img {
@@ -256,6 +261,8 @@ h1 span:nth-child(21) { animation-delay: 1.9s; }
         margin: 10px 0; /* Space between images for mobile */
     }
 }
+
+
 
 /* Achievements section styles */
 .achievement-frame {
@@ -328,6 +335,10 @@ h1 span:nth-child(21) { animation-delay: 1.9s; }
 .carousel-control-next-icon:hover {
     box-shadow: 0 0 20px rgba(255, 255, 255, 1); /* Stronger glow on hover */
 }
+#achievementCounter {
+    font-size: 18px;
+    font-weight: bold;
+}
 
 /* Progress bar styles */
 .progress-bar {
@@ -354,6 +365,7 @@ h1 span:nth-child(21) { animation-delay: 1.9s; }
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), /* White glow */
                  0 0 10px rgba(0, 255, 255, 0.7), /* Cyan glow */
                  0 0 15px rgba(0, 255, 255, 1); /* Stronger cyan glow */
+    
   }
   
 
@@ -372,9 +384,6 @@ h1 span:nth-child(21) { animation-delay: 1.9s; }
 }
 
 @media (max-width: 576px) {
-    header h1 {
-        font-size: 2rem; /* Further decrease font size on very small screens */
-    }
     .carousel-item {
         flex-direction: column; /* Stack images vertically on very small screens */
     }
@@ -405,22 +414,25 @@ h1 span:nth-child(21) { animation-delay: 1.9s; }
   }
   
   .btn-primary {
-    background-color: #007bff; /* Bootstrap primary color */
+    background-color: #6daef8; /* Bootstrap primary color */
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     transition: background-color 0.3s;
-     margin: 10px 15px 10px 0; /* Adds spacing between the buttons */
+    margin: 10px 15px 10px 0; /* Adds spacing between the buttons */
+    animation: moveLight 3s linear infinite; /* Apply moving light animation */
+    
   }
   
   .btn-primary:hover {
     background-color: #0056b3; /* Darker shade on hover */
   }
-/* General modal styles */
+  /* General modal styles */
 .modal-dialog {
     max-width: 100%; /* Ensure modal takes up full width on smaller screens */
     margin: 10px auto; /* Add space around modal */
+    animation: moveLight 3s linear infinite; /* Apply moving light animation */
 }
 
 .modal-content {
@@ -452,8 +464,3 @@ h1 span:nth-child(21) { animation-delay: 1.9s; }
         max-width: 95%; /* Even smaller width for very small devices */
     }
 }
-
-
-
-  
-
