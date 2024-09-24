@@ -27,30 +27,33 @@ header {
     padding: 20px 0;
     text-align: center;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Glow effect for header */
+    overflow: hidden; /* Prevent overflow */
 }
 
 header h1 {
     margin-bottom: 10px;
-    font-size: 3rem; /* Adjust the default font size */
-    display: flex; /* Use flexbox for layout */
-    justify-content: center; /* Center the text */
+    font-size: 2.5rem; /* Adjust the default font size */
+    display: inline-block; /* Allow inline-block to prevent cut off */
+    white-space: normal; /* Allow text to wrap */
     color: transparent; /* Make text transparent for the glow effect */
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Basic shadow for better visibility */
     overflow-wrap: break-word; /* Prevent text overflow */
+    padding: 0 10px; /* Add padding to ensure text isn’t clipped */
 }
-/* Responsive typography for header */
+
+/* Media query for smaller screens */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 2rem; /* Adjust font size for medium screens */
+        font-size: 2rem; /* Reduce font size for smaller screens */
+        white-space: normal; /* Ensure text wraps */
     }
 }
 
 @media (max-width: 576px) {
     header h1 {
-        font-size: 1.5rem; /* Further reduce font size for mobile screens */
+        font-size: 1.8rem; /* Further reduce for mobile */
     }
 }
-
 .navbar {
     margin: 0 auto;
 }
