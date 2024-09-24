@@ -472,11 +472,21 @@ h1 span:nth-child(21) { animation-delay: 1.9s; }
 @media (max-width: 768px) {
     .modal-dialog {
         max-width: 90%; /* Reduce modal size slightly on smaller screens */
+        margin: 5% auto; /* Adjust margin for a better fit */
+    }
+
+    .modal-content {
+        max-height: 80vh; /* Adjust max height on smaller screens */
     }
 }
 
 @media (max-width: 576px) {
     .modal-dialog {
         max-width: 95%; /* Even smaller width for very small devices */
+        margin: 5% auto; /* Consistent margin on very small devices */
+    }
+
+    .modal-content {
+        max-height: 70vh; /* Further reduce max height on very small screens */
     }
 }
