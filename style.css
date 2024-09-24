@@ -183,6 +183,21 @@ h1 span:nth-child(21) { animation-delay: 1.9s; }
     animation: moveLight 3s linear infinite; /* Apply moving light animation */
     
 }
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+    .sample-code {
+        padding: 10px; /* Slightly reduce padding on smaller screens */
+        font-size: 14px; /* Adjust font size for better readability */
+    }
+}
+
+@media (max-width: 576px) {
+    .sample-code {
+        padding: 8px; /* Further reduce padding for very small devices */
+        font-size: 12px; /* Smaller font size for very small devices */
+    }
+}
+
 
 /* Skills section styles */
 #skills {
