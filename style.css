@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900,100italic,300italic,400italic);
+@import url(https://fonts.googleapis.com/css?family=Oswald:700,400,300);
 /* Custom styling */
 
 /* Reset some basic elements */
@@ -53,6 +55,7 @@ header h1 {
         font-size: 1.8rem; /* Further reduce for mobile */
     }
 }
+
 
 
 .navbar {
@@ -184,7 +187,9 @@ h1 span:nth-child(21) { animation-delay: 1.9s; }
     white-space: pre-wrap; /* Preserve whitespace and line breaks */
     word-wrap: break-word; /* Allow long words to break to next line */
     max-width: 800px; /* Set a maximum width for the code block */
+    max-height: auto;
     margin: 0 auto; /* Center the code block */
+    text-align: center;
 }
 
 /* Responsive styling for smaller screens */
@@ -193,6 +198,7 @@ h1 span:nth-child(21) { animation-delay: 1.9s; }
         padding: 10px; /* Slightly reduce padding on smaller screens */
         font-size: 14px; /* Adjust font size for better readability */
         max-width: 95%; /* Increase width on smaller devices */
+        max-height: auto;
     }
 }
 
@@ -201,6 +207,7 @@ h1 span:nth-child(21) { animation-delay: 1.9s; }
         padding: 8px; /* Further reduce padding for very small devices */
         font-size: 12px; /* Smaller font size for very small devices */
         max-width: 100%; /* Full width for very small devices */
+        max-height: auto;
     }
 }
 
@@ -303,10 +310,11 @@ h1 span:nth-child(21) { animation-delay: 1.9s; }
 
 /* Achievements section styles */
 .achievement-frame {
-    background-color: white;
-    border: 2px solid #343a40; /* Frame color */
-    border-radius: 5px;
+    background-color: #f8f9fa;
+    border: 1px solid #ccc; /* Frame color */
+    border-radius: 10px;
     padding: 20px;
+    margin: 10px;
     margin-bottom: 10px;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -511,3 +519,89 @@ h1 span:nth-child(21) { animation-delay: 1.9s; }
         max-height: 70vh; /* Further reduce max height on very small screens */
     }
 }
+
+.brand {
+    
+    position: relative;
+    z-index: 3;
+    position: fixed;
+    width: 100%;
+    top: 0;
+  }
+  .brand .logo {
+    box-sizing: border-box;
+    padding: 20px;
+    float: left;
+    display: block;
+    width: 200px;
+  }
+  @media only screen and (min-width: 992px) {
+    .brand .logo {
+      width: 250px;
+    }
+  }
+  .brand .logo img {
+    height: 20px;
+  }
+  .brand .menu-btn {
+    float: right;
+    background: #232d3b;
+    text-align: center;
+    cursor: pointer;
+    color: #fff;
+    padding: 20px 20px;
+  }
+  @media only screen and (min-width: 992px) {
+    .brand .menu-btn {
+      display: none;
+    }
+  }
+.brand .ts-profile-nav {
+    float: right;
+    display: none;
+  }
+  .brand .ts-profile-nav li {
+    float: left;
+    position: relative;
+  }
+  .brand .ts-profile-nav li a {
+    display: block;
+    padding: 20px;
+    color: #fff;
+  }
+  .brand .ts-profile-nav li ul {
+    visibility: hidden;
+    opacity: 0;
+    right: 0;
+    position: absolute;
+  }
+  .brand .ts-profile-nav li ul li {
+    float: none;
+    width: 180px;
+  }
+  .brand .ts-profile-nav li ul li a {
+    padding: 10px 20px;
+    background: #222;
+  }
+  .brand .ts-profile-nav .ts-account .fa-angle-down {
+    float: right;
+  }
+  .brand .ts-profile-nav .ts-account > a {
+    width: 180px;
+    background: #2c3136;
+  }
+  .brand .ts-profile-nav .ts-account .ts-avatar {
+    border-radius: 50%;
+    height: 28px;
+    margin: -10px 0;
+    margin-right: 10px;
+  }
+  .brand .ts-profile-nav .ts-account:hover ul {
+    visibility: visible;
+    opacity: 1;
+  }
+  @media only screen and (min-width: 992px) {
+    .brand .ts-profile-nav {
+      display: block;
+    }
+  }

@@ -10,31 +10,31 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="style.css">
+       <!-- Add the favicon links here -->
+       <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/images/favicon-icon/apple-touch-icon-144-precomposed.png">
+       <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/favicon-icon/apple-touch-icon-114-precomposed.html">
+       <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/images/favicon-icon/apple-touch-icon-72-precomposed.png">
+       <link rel="apple-touch-icon-precomposed" href="assets/images/favicon-icon/apple-touch-icon-57-precomposed.png">
+       <link rel="shortcut icon" href="assets/images/favicon-icon/favicon.jpg">
   <style>
-    .sample-code {
-      text-align: center;
-      background-color: #f8f9fa;
-      padding: 15px;
-      border-radius: 5px;
-      border: 1px solid #dee2e6;
-      overflow: auto;
-      font-family: monospace;
-    }
-    .achievement-frame {
-      padding: 20px;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      background-color: #f8f9fa;
-      margin: 10px;
-    }
-    .progress-bar {
-      background-color: #28a745;
-      height: 10px;
-    }
+    
   </style>
+   
 </head>
 <body class="d-flex flex-column min-vh-100">
   <header class="bg-dark text-white text-center py-3">
+    <div class="brand clearfix" id="header h1">
+    <ul class="ts-profile-nav">
+  
+      <li class="ts-account">
+          <a href="#"><img src="Profile-Pic/MANU.jpg" class="ts-avatar hidden-side" alt=""> Account <i class="fa fa-angle-down hidden-side"></i></a>
+          <ul>
+              <li><a href="change-password.php">Change Password</a></li>
+              <li><a href="logout.php">Logout</a></li>
+          </ul>
+      </li>
+  </ul>
+  </div>
     <h1>
       <span>E</span>
       <span>m</span>
@@ -61,6 +61,7 @@
       <span>u</span>
       <span>i</span>
   </h1>
+  
   <main class="flex-grow-1">
   
       <nav class="navbar navbar-expand-lg navbar-dark">
@@ -103,14 +104,42 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <div class="achievement-frame">
-                        <h4>Completed a Diploma in Information Technology at Kisii University!</h4>
-                    </div>
-                </div>
+                  <div class="achievement-frame">
+                      <h4>Completed a Diploma in Information Technology at Kisii University!</h4>
+                      <a href="#" class="btn btn-link" onclick="showCertificate()">View Certificate</a>
+                      <!-- Embed the PDF but hide it initially -->
+                      <div id="certificate-viewer" style="display: none; margin-top: 10px;">
+                          <embed src="certificates/MANURAJ KSU.pdf" width="100%" height="600px" type="application/pdf">
+                      </div>
+                  </div>
+              </div>
+              
+              <script>
+              function showCertificate() {
+                  var viewer = document.getElementById('certificate-viewer');
+                  if (viewer.style.display === "none") {
+                      viewer.style.display = "block";
+                  } else {
+                      viewer.style.display = "none";
+                  }
+              }
+              </script>
+              <script>
+                function showDocument() {
+                    var viewer = document.getElementById('doc-viewer');
+                    if (viewer.style.display === "none") {
+                        viewer.style.display = "block";
+                    } else {
+                        viewer.style.display = "none";
+                    }
+                }
+                </script>
+              
                 <div class="carousel-item">
                     <div class="achievement-frame">
                         <h4>Worked in IT at NHIF, Kericho!</h4>
                         <p>Gained hands-on experience in managing IT systems and support.</p>
+                        <a href="certificates/Recomentation NHIF.pdf" target="_blank" class="btn btn-link">View Recomentation</a>
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -161,6 +190,14 @@
               <h3 class="card-title">Campus Project: Car Rental System</h3>
               <p class="card-text">A web application for managing car rentals. Technologies used: PHP, Bootstrap, Javascript, HTML, CSS, MySQL.</p>
               <a href="https://emmanuelkirui.42web.io/carrental" class="btn btn-primary" target="_blank">View Project</a>
+               <!-- Link to the local Word document -->
+            <a href="Docs/CAR%20RENTAL%20SYSTEM1.2.docx" class="btn btn-primary" target="_blank">View Documentation</a>
+            <!-- Embed the Word document using Google Docs Viewer -->
+        <div id="doc-viewer" style="display: none; margin-top: 10px;">
+          <iframe src="https://docs.google.com/gview?url=https://yourwebsite.com/certificates/MANURAJ%20KSU.docx&embedded=true" 
+              style="width:100%; height:600px;" frameborder="0">
+          </iframe>
+      </div>
             </div>
           </div>
         </div>
@@ -202,15 +239,6 @@
         <div class="col-md-6 mb-4">
           <div class="card">
             <div class="card-body">
-              <h3 class="card-title">Kisii University</h3>
-              <p class="card-text">Diploma in Information Technology</p>
-              <a href="#" class="btn btn-primary" target="_blank">View Certificate</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 mb-4">
-          <div class="card">
-            <div class="card-body">
               <h3 class="card-title">Google</h3>
               <p class="card-text">Earned a certificate in cloud cybersecurity.</p>
               <a href="https://www.credly.com/badges/c45a92ac-2f59-4316-814b-90195f482734/public_url" class="btn btn-primary">View Certificate</a>
@@ -220,19 +248,27 @@
         <div class="col-md-6 mb-4">
           <div class="card">
             <div class="card-body">
-              <h3 class="card-title">St.John's Ambulance</h3>
-              <p class="card-text">First Aid Course</p>
-              <a href="#" class="btn btn-primary">View Certificate</a>
+              <h3 class="card-title">Kisii University</h3>
+              <p class="card-text">Diploma in Information Technology</p>
+              <a href="certificates/MANURAJ KSU.pdf" class="btn btn-primary" target="_blank">View Certificate</a>
             </div>
           </div>
         </div>
-       
         <div class="col-md-6 mb-4">
           <div class="card">
             <div class="card-body">
               <h3 class="card-title">Kabungt Boys High School</h3>
               <p class="card-text">Earned a certificate in leadership as ICT prefect.</p>
-              <a href="#" class="btn btn-primary" target="_blank">View Certificate</a>
+              <a href="certificates/EPSON050 ICT-PREFECT.PDF" class="btn btn-primary" target="_blank">View Certificate</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title">St.John's Ambulance</h3>
+              <p class="card-text">First Aid Course</p>
+              <a href="certificates/EPSON048 ST JOHN'S.PDF" class="btn btn-primary">View Certificate</a>
             </div>
           </div>
         </div>
@@ -246,9 +282,9 @@
         <div class="col-md-6 mb-4">
           <div class="card">
             <div class="card-body">
-              <h3 class="card-title">National Health Insuarance(NHIF) Kericho</h3>
+              <h3 class="card-title">National Health Insurance Fund (NHIF) Kericho</h3>
               <p class="card-text">Provided technical support and troubleshooting for various software and hardware issues.</p>
-              <a href="#" class="btn btn-primary" target="_blank">View Recomentation</a>
+              <a href="certificates/Recomentation NHIF.pdf" class="btn btn-primary" target="_blank">View Recomentation</a>
             </div>
           </div>
         </div>
