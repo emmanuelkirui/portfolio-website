@@ -131,17 +131,32 @@ h1 span:nth-child(21) { animation-delay: 1.9s; }
 
 /* About section */
 .profile-pic {
-    width: 150px; /* Width of the profile picture */
-    height: auto;
+    width: 150px; /* Set a fixed width */
+    height: 150px; /* Set the height to match the width for a perfect circle */
     border-radius: 50%; /* Circular profile picture */
     box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Glow effect for profile picture */
+    object-fit: cover; /* Ensures the image covers the circular area without distortion */
+    object-position: center; /* Centers the image inside the container */
+    
 }
+
 /* Profile Picture Animation */
 .profile-pic-animated {
     border-radius: 50%; /* Make it circular */
     animation: moveLight 3s linear infinite; /* Apply moving light animation */
 }
-
+/* Container for the image */
+.profile-pic-container {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Circular container */
+    overflow: hidden; /* Ensures anything outside the container is hidden */
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Glow effect */
+    margin: 0 auto; /* Center the container horizontally */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 /* Moving light animation */
 @keyframes moveLight {
     0% {
