@@ -40,16 +40,32 @@
     }
     .responsive-iframe {
     width: 100%; /* Full width for both documents */
-    height: 500px; /* Adjust the height as needed */
+    height: 600px; /* Increased height for better visibility */
     border: none; /* Remove iframe border */
 }
 
+/* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     .col-md-6 {
         width: 100%; /* Stack columns on smaller screens */
-        margin-bottom: 20px; /* Add space between the sections */
+        margin-bottom: 30px; /* Add space between sections */
+    }
+
+    .responsive-iframe {
+        height: 450px; /* Adjust height for mobile */
+    }
+
+    .btn {
+        width: 90%; /* Full-width buttons on smaller screens */
     }
 }
+
+/* Adjust button sizes and visibility */
+.btn-primary {
+    margin-top: 15px; /* Increase margin above buttons */
+    padding: 10px 20px; /* Add padding for better touch targets */
+}
+
 
 
   </style>
