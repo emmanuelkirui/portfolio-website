@@ -102,6 +102,26 @@
     </ul>
   </div>
 </nav>
+    <!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+$(document).ready(function() {
+    // Toggle the menu on hamburger icon click
+    $('.navbar-toggler').click(function() {
+        // Toggle the 'show' class on the collapsible menu
+        $('#navbarNav').toggleClass('show');
+    });
+
+    // Close the menu when a link is clicked
+    $('.nav-link').click(function() {
+        $('#navbarNav').removeClass('show');
+    });
+});
+</script>
+
 
   </header>
 
