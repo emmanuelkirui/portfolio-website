@@ -40,8 +40,9 @@
     }
     .responsive-iframe {
     width: 100%; /* Full width for both documents */
-    height: 600px; /* Increased height for better visibility */
+    height: 600px; /* Set a fixed height for better visibility */
     border: none; /* Remove iframe border */
+    overflow: auto; /* Allow scrolling if content overflows */
 }
 .iframe-wrapper {
     height: 400px; /* Fixed height for wrapper */
@@ -54,9 +55,9 @@
 @media (max-width: 768px) {
     .col-md-6 {
         width: 100%; /* Stack columns on smaller screens */
-        margin-bottom: 30px; /* Add space between sections */
+        margin-bottom: 20px; /* Add space between the sections */
     }
-
+}
     .responsive-iframe {
         height: 450px; /* Adjust height for mobile */
     }
@@ -603,38 +604,41 @@ gcloud compute networks create labnet --subnet-mode=custom
 
 <section id="documents" class="py-5">
   <div class="container">
-    <h2 class="text-center">Documents</h2>
-    <div class="row">
-      <!-- CV Viewer -->
-      <div class="col-md-6 text-center">
-        <h3>Resume</h3>
-        <iframe 
-          src="https://docs.google.com/gview?url=https://emmanuelkirui.github.io/portfolio-website/Docs/Emmanuel%20Kiprotich%20Kirui%20Resume.docx&embedded=true" 
-          class="responsive-iframe" 
-          frameborder="0">
-          This browser does not support viewing DOCX files. 
-          <a href="Docs/Emmanuel Kiprotich Kirui Resume.docx" download>Click here to download the CV</a>.
-        </iframe>
-        <br>
-        <a href="Docs/Emmanuel Kiprotich Kirui Resume.docx" class="btn btn-primary mt-2" target="_blank">Download CV</a>
-      </div>
+      <h2 class="text-center">Documents</h2>
+      <div class="row">
+          <!-- CV Viewer -->
+          <div class="col-md-6 text-center">
+              <h3>Resume</h3>
+              <iframe 
+                  src="https://docs.google.com/gview?url=https://emmanuelkirui.github.io/portfolio-website/Docs/Emmanuel%20Kiprotich%20Kirui%20Resume.docx&embedded=true" 
+                  class="responsive-iframe" 
+                  frameborder="0"
+                  loading="lazy">
+                  This browser does not support viewing DOCX files. 
+                  <a href="Docs/Emmanuel Kiprotich Kirui Resume.docx" download>Click here to download the CV</a>.
+              </iframe>
+              <br>
+              <a href="Docs/Emmanuel Kiprotich Kirui Resume.docx" class="btn btn-primary mt-2" target="_blank">Download CV</a>
+          </div>
 
-      <!-- Resume Viewer -->
-      <div class="col-md-6 text-center">
-        <h3>CV</h3>
-        <iframe 
-          src="https://docs.google.com/gview?url=https://emmanuelkirui.github.io/portfolio-website/Docs/Emmanuel%20Kirui%20CV.docx&embedded=true" 
-          class="responsive-iframe" 
-          frameborder="0">
-          This browser does not support viewing DOCX files. 
-          <a href="Docs/Emmanuel Kirui CV.docx" download>Click here to download the Resume</a>.
-        </iframe>
-        <br>
-        <a href="Docs/Emmanuel Kirui CV.docx" class="btn btn-primary mt-2" target="_blank">Download Resume</a>
+          <!-- Resume Viewer -->
+          <div class="col-md-6 text-center">
+              <h3>CV</h3>
+              <iframe 
+                  src="https://docs.google.com/gview?url=https://emmanuelkirui.github.io/portfolio-website/Docs/Emmanuel%20Kirui%20CV.docx&embedded=true" 
+                  class="responsive-iframe" 
+                  frameborder="0"
+                  loading="lazy">
+                  This browser does not support viewing DOCX files. 
+                  <a href="Docs/Emmanuel Kirui CV.docx" download>Click here to download the Resume</a>.
+              </iframe>
+              <br>
+              <a href="Docs/Emmanuel Kirui CV.docx" class="btn btn-primary mt-2" target="_blank">Download Resume</a>
+          </div>
       </div>
-    </div>
   </div>
 </section>
+
 
 
 
