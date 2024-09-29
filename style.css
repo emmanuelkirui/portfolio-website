@@ -441,6 +441,11 @@ h1 span:nth-child(21) { animation-delay: 1.9s; }
 }
 
 /* Footer styles */
+footer {
+    position: relative; /* or static */
+    bottom: 0;
+    width: 100%;
+}
 .glowing-footer {
     color: black; /* Change text color if needed */
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), /* White glow */
