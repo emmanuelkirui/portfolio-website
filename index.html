@@ -112,7 +112,7 @@
           <li class="nav-item"><a class="nav-link" href="#skills" onclick="event.preventDefault(); scrollToSection('skills');">Skills</a></li>
           <li class="nav-item"><a class="nav-link" href="#samples" onclick="event.preventDefault(); scrollToSection('samples');">Sample Code</a></li>
           <li class="nav-item"><a class="nav-link" href="#screenshots" onclick="event.preventDefault(); scrollToSection('screenshots');">Screenshots</a></li>
-          <li class="nav-item"><a class="nav-link" href="#documents" onclick="event.preventDefault(); scrollToSection('documents');">Documents</a></li>
+          <li class="nav-item"><a class="nav-link" href="#documents" onclick="event.preventDefault(); scrollToSection('documents');">Documents</a</li>
       </ul>
       
       </div>
@@ -451,12 +451,17 @@ gcloud compute networks create labnet --subnet-mode=custom
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
+            <!-- Counter to display current image number out of total -->
+            <div class="text-center mt-2">
+                <span id="currentSlide">1</span> / <span id="totalSlides"></span>
+            </div>
         </div>
     </div>
+</section>
 
 <!-- Modal for Viewing Images -->
 <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document" > <!-- Adjusted modal dialog width to 105% -->
+  <div class="modal-dialog" role="document"> <!-- Adjusted modal dialog width to 105% -->
       <div class="modal-content" style="width: 150%;">
           <div class="modal-header">
               <h5 class="modal-title" id="imageModalLabel">Image Details</h5>
@@ -482,13 +487,8 @@ gcloud compute networks create labnet --subnet-mode=custom
   </div>
 </div>
 
-<!-- Image carousel section -->
-<section>
-  <div id="carouselImages" class="carousel-inner"></div>
-</section>
-
 <script>
-  const imageFolder = 'images/';
+    const imageFolder = 'images/';
   const images = ['image1.png', 'image2.png', 'image3.png', '3vm-instances created.png',
       'Active vulnerabilities.png', 'Assigning roles to principals.png', 'Audit log.png', 'audits_logs dataset.png',
       'Backup and DR.png', 'Backup and Recovery successfully.png', 'Backup recovery in a different project.png', 
@@ -511,8 +511,14 @@ gcloud compute networks create labnet --subnet-mode=custom
       'vm backup plans.png', 'Vm instances.png', 'vm instances1.png', 'vm-instances for the new project2.png', 'vm3.png',
       'vmsearch.png', 'vpcwith firewall terraform.png'];
 
+
   const carouselImagesContainer = document.getElementById('carouselImages');
   const itemsPerSlide = 3; // Number of images per carousel item
+  const totalSlides = Math.ceil(images.length / itemsPerSlide); // Calculate total number of slides
+
+  // Set the total number of slides in the counter
+  document.getElementById('totalSlides').textContent = totalSlides;
+
   for (let i = 0; i < images.length; i += itemsPerSlide) {
       const isActive = i === 0 ? 'active' : '';
       const itemHTML = `
@@ -551,6 +557,12 @@ gcloud compute networks create labnet --subnet-mode=custom
           zoomLevel -= 0.1;
           document.getElementById('modalImage').style.transform = `scale(${zoomLevel})`;
       }
+  });
+
+  // Event listener to update the counter on slide change
+  $('#screenshotCarousel').on('slide.bs.carousel', function (event) {
+      const currentSlideIndex = event.to + 1; // Carousel event gives 0-based index
+      document.getElementById('currentSlide').textContent = currentSlideIndex;
   });
 </script>
 
