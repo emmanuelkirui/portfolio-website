@@ -43,6 +43,12 @@
     height: 600px; /* Increased height for better visibility */
     border: none; /* Remove iframe border */
 }
+    .iframe-wrapper {
+    height: 400px; /* Fixed height for wrapper */
+    overflow-y: auto; /* Allow scrolling */
+    position: relative; /* Positioning context */
+}
+
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
@@ -54,6 +60,12 @@
     .responsive-iframe {
         height: 450px; /* Adjust height for mobile */
     }
+  .iframe-wrapper {
+    height: 400px; /* Fixed height for wrapper */
+    overflow-y: auto; /* Allow scrolling */
+    position: relative; /* Positioning context */
+}
+
 
     .btn {
         width: 90%; /* Full-width buttons on smaller screens */
