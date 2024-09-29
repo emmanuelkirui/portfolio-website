@@ -162,28 +162,27 @@ h1 span:nth-child(21) { animation-delay: 1.9s; }
 /* Moving light animation */
 @keyframes moveLight {
     0% {
-        box-shadow: 0 0 30px rgba(255, 87, 34, 0.8); /* Start with a soft coral */
+        box-shadow: 0 0 20px rgba(255, 0, 0, 1); /* Start with bright red */
     }
     25% {
-        box-shadow: 0 0 30px rgba(76, 175, 80, 0.8); /* Soft green */
+        box-shadow: 10px 10px 30px rgba(0, 255, 0, 1); /* Move to bright green */
     }
     50% {
-        box-shadow: 0 0 30px rgba(33, 150, 243, 0.8); /* Soft blue */
+        box-shadow: 20px 20px 40px rgba(0, 0, 255, 1); /* Move to bright blue */
     }
     75% {
-        box-shadow: 0 0 30px rgba(255, 235, 59, 0.8); /* Soft yellow */
+        box-shadow: 10px 10px 30px rgba(255, 255, 0, 1); /* Move to bright yellow */
     }
     100% {
-        box-shadow: 0 0 30px rgba(255, 87, 34, 0.8); /* Back to soft coral */
+        box-shadow: 0 0 20px rgba(255, 0, 0, 1); /* Back to bright red */
     }
 }
-
 /* Media queries for specific screen size 993px by 914px */
 @media (min-width: 993px) and (max-width: 993px) and (min-height: 914px) and (max-height: 914px) {
     .profile-pic {
         width: 130px; /* Adjust the size for 993px by 914px screens */
         height: 130px; /* Adjust the size for 993px by 914px screens */
-        transform: scale(1.05) translateY(50%); /* Adjust the transform for 993px by 914px screens */
+        transform: scale(1.05) translateY(90%); /* Adjust the transform for 993px by 914px screens */
     }
 
     .profile-pic-container {
