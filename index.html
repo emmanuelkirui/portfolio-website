@@ -43,7 +43,7 @@
     height: 600px; /* Increased height for better visibility */
     border: none; /* Remove iframe border */
 }
-    .iframe-wrapper {
+.iframe-wrapper {
     height: 400px; /* Fixed height for wrapper */
     overflow-y: auto; /* Allow scrolling */
     position: relative; /* Positioning context */
@@ -60,7 +60,7 @@
     .responsive-iframe {
         height: 450px; /* Adjust height for mobile */
     }
-  .iframe-wrapper {
+    .iframe-wrapper {
     height: 400px; /* Fixed height for wrapper */
     overflow-y: auto; /* Allow scrolling */
     position: relative; /* Positioning context */
@@ -77,7 +77,6 @@
     margin-top: 15px; /* Increase margin above buttons */
     padding: 10px 20px; /* Add padding for better touch targets */
 }
-
 
 
   </style>
@@ -232,7 +231,7 @@ $(document).ready(function() {
 
             <!-- Counter Display -->
             <div id="achievementCounter" class="text-center my-3">
-                <span id="currentAchievement">1</span> / <span id="totalAchievements">6</span>
+                <span id="currentAchievement"></span> / <span id="totalAchievements"></span>
             </div>
 
             <!-- Carousel Controls -->
@@ -248,33 +247,38 @@ $(document).ready(function() {
     </div>
 </section>
 
-<!-- Place your JavaScript code here -->
 <script>
-    // JavaScript to update the counter as the carousel slides
-    document.addEventListener('DOMContentLoaded', function () {
-        var totalItems = document.querySelectorAll('#achievementCarousel .carousel-item').length;
-        var currentAchievement = document.getElementById('currentAchievement');
-        var totalAchievements = document.getElementById('totalAchievements');
+  document.addEventListener('DOMContentLoaded', function () {
+      var totalItems = document.querySelectorAll('#achievementCarousel .carousel-item').length;
+      var currentAchievement = document.getElementById('currentAchievement');
+      var totalAchievements = document.getElementById('totalAchievements');
 
-        // Set the total achievements count on page load
-        totalAchievements.textContent = totalItems;
+      // Set the total achievements count on page load
+      totalAchievements.textContent = totalItems;
 
-        // Function to update the counter
-        var updateCounter = function () {
-            var activeIndex = document.querySelector('#achievementCarousel .carousel-item.active');
-            var currentIndex = Array.prototype.indexOf.call(activeIndex.parentNode.children, activeIndex) + 1;
-            currentAchievement.textContent = currentIndex;
-        };
+      // Function to update the counter
+      var updateCounter = function () {
+          // Find the active item
+          var activeItems = document.querySelectorAll('#achievementCarousel .carousel-item');
+          var currentIndex = Array.from(activeItems).findIndex(item => item.classList.contains('active'));
 
-        // Listen for carousel slide events
-        $('#achievementCarousel').on('slid.bs.carousel', function () {
-            updateCounter();
-        });
+          // Log the currentIndex to help debug
+          console.log("Current Index:", currentIndex);
 
-        // Initial counter update
-        updateCounter();
-    });
+          // Update the current achievement display
+          currentAchievement.textContent = currentIndex + 1; // +1 to make it 1-based index
+      };
+
+      // Listen for carousel slide events
+      $('#achievementCarousel').on('slid.bs.carousel', function () {
+          updateCounter();
+      });
+
+      // Initial counter update
+      updateCounter();
+  });
 </script>
+
 
   <section id="projects" class="my-5">
     <div class="container">
