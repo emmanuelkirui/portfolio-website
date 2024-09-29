@@ -18,6 +18,14 @@
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery and Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 
 
 <!-- Bootstrap JavaScript (with Popper.js for tooltips and dropdowns) -->
@@ -354,47 +362,114 @@ $(document).ready(function() {
   </section>
   <section id="Certifications" class="my-5">
     <div class="container">
-      <h2 class="text-center">Certifications</h2>
-      <div class="row">
-        <div class="col-md-6 mb-4">
-          <div class="card">
-            <div class="card-body">
-              <h3 class="card-title">Google</h3>
-              <p class="card-text">Earned a certificate in cloud cybersecurity.</p>
-              <a href="https://www.credly.com/badges/c45a92ac-2f59-4316-814b-90195f482734/public_url" class="btn btn-primary">View Certificate</a>
+        <h2 class="text-center">Certifications</h2>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Google</h3>
+                        <p class="card-text">Earned a certificate in cloud cybersecurity.</p>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#googleModal">View Certificate</button>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="col-md-6 mb-4">
-          <div class="card">
-            <div class="card-body">
-              <h3 class="card-title">Kisii University</h3>
-              <p class="card-text">Diploma in Information Technology</p>
-              <a href="certificates/MANURAJ KSU.pdf" class="btn btn-primary" target="_blank">View Certificate</a>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Kisii University</h3>
+                        <p class="card-text">Diploma in Information Technology</p>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#kisiiModal">View Certificate</button>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="col-md-6 mb-4">
-          <div class="card">
-            <div class="card-body">
-              <h3 class="card-title">Kabungt Boys High School</h3>
-              <p class="card-text">Earned a certificate in leadership as ICT prefect.</p>
-              <a href="certificates/EPSON050 ICT-PREFECT.PDF" class="btn btn-primary" target="_blank">View Certificate</a>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Kabungt Boys High School</h3>
+                        <p class="card-text">Earned a certificate in leadership as ICT prefect.</p>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#kabungtModal">View Certificate</button>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="col-md-6 mb-4">
-          <div class="card">
-            <div class="card-body">
-              <h3 class="card-title">St.John's Ambulance</h3>
-              <p class="card-text">First Aid Course</p>
-              <a href="certificates/EPSON048 ST JOHN'S.PDF" class="btn btn-primary">View Certificate</a>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">St. John's Ambulance</h3>
+                        <p class="card-text">First Aid Course</p>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#stJohnModal">View Certificate</button>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </section>
+</section>
+
+<!-- Modal Structures -->
+<div class="modal fade" id="googleModal" tabindex="-1" role="dialog" aria-labelledby="googleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="googleModalLabel">Google Certificate</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body text-center">
+            <p>Click the link below to view your Google Certificate:</p>
+            <a href="https://www.credly.com/badges/c45a92ac-2f59-4316-814b-90195f482734/public_url" target="_blank" class="btn btn-primary">View Certificate</a>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="modal fade" id="kisiiModal" tabindex="-1" role="dialog" aria-labelledby="kisiiModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="kisiiModalLabel">Kisii University Certificate</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <embed src="certificates/MANURAJ KSU.pdf" class="responsive-iframe" type="application/pdf">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="kabungtModal" tabindex="-1" role="dialog" aria-labelledby="kabungtModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="kabungtModalLabel">Kabungt Boys High School Certificate</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <embed src="certificates/EPSON050 ICT-PREFECT.PDF" class="responsive-iframe" type="application/pdf">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="stJohnModal" tabindex="-1" role="dialog" aria-labelledby="stJohnModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="stJohnModalLabel">St. John's Ambulance Certificate</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <embed src="certificates/EPSON048 ST JOHN'S.PDF" class="responsive-iframe" type="application/pdf">
+            </div>
+        </div>
+    </div>
+</div>
+
   <section id="Intern/Attachment" class="my-5"></section>
     <div class="container">
       <h2 class="text-center">Intern/Attachment</h2>
