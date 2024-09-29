@@ -111,21 +111,22 @@ h1 span:nth-child(21) { animation-delay: 1.9s; }
 /* Moving light animation */
 @keyframes moveLight {
     0% {
-        text-shadow: 0 0 10px rgba(255, 0, 0, 1); /* Start with bright red */
+        box-shadow: 0 0 30px rgba(255, 87, 34, 0.8); /* Start with a soft coral */
     }
     25% {
-        text-shadow: 10px 10px 20px rgba(0, 255, 0, 1); /* Bright green */
+        box-shadow: 0 0 30px rgba(76, 175, 80, 0.8); /* Soft green */
     }
     50% {
-        text-shadow: 20px 20px 30px rgba(0, 0, 255, 1); /* Bright blue */
+        box-shadow: 0 0 30px rgba(33, 150, 243, 0.8); /* Soft blue */
     }
     75% {
-        text-shadow: 10px 10px 20px rgba(255, 255, 0, 1); /* Bright yellow */
+        box-shadow: 0 0 30px rgba(255, 235, 59, 0.8); /* Soft yellow */
     }
     100% {
-        text-shadow: 0 0 10px rgba(255, 0, 0, 1); /* Back to bright red */
+        box-shadow: 0 0 30px rgba(255, 87, 34, 0.8); /* Back to soft coral */
     }
 }
+
 
 
 
@@ -162,21 +163,22 @@ h1 span:nth-child(21) { animation-delay: 1.9s; }
 /* Moving light animation */
 @keyframes moveLight {
     0% {
-        box-shadow: 0 0 20px rgba(255, 0, 0, 1); /* Start with bright red */
+        box-shadow: 0 0 30px rgba(255, 87, 34, 0.8); /* Start with a soft coral */
     }
     25% {
-        box-shadow: 10px 10px 30px rgba(0, 255, 0, 1); /* Move to bright green */
+        box-shadow: 0 0 30px rgba(76, 175, 80, 0.8); /* Soft green */
     }
     50% {
-        box-shadow: 20px 20px 40px rgba(0, 0, 255, 1); /* Move to bright blue */
+        box-shadow: 0 0 30px rgba(33, 150, 243, 0.8); /* Soft blue */
     }
     75% {
-        box-shadow: 10px 10px 30px rgba(255, 255, 0, 1); /* Move to bright yellow */
+        box-shadow: 0 0 30px rgba(255, 235, 59, 0.8); /* Soft yellow */
     }
     100% {
-        box-shadow: 0 0 20px rgba(255, 0, 0, 1); /* Back to bright red */
+        box-shadow: 0 0 30px rgba(255, 87, 34, 0.8); /* Back to soft coral */
     }
 }
+
 
 
 /* Projects section */
@@ -270,21 +272,22 @@ h1 span:nth-child(21) { animation-delay: 1.9s; }
 /* Moving light animation */
 @keyframes moveLight {
     0% {
-        box-shadow: 0 0 20px rgba(255, 0, 0, 1); /* Start with bright red */
+        box-shadow: 0 0 30px rgba(255, 87, 34, 0.8); /* Start with a soft coral */
     }
     25% {
-        box-shadow: 10px 10px 30px rgba(0, 255, 0, 1); /* Move to bright green */
+        box-shadow: 0 0 30px rgba(76, 175, 80, 0.8); /* Soft green */
     }
     50% {
-        box-shadow: 20px 20px 40px rgba(0, 0, 255, 1); /* Move to bright blue */
+        box-shadow: 0 0 30px rgba(33, 150, 243, 0.8); /* Soft blue */
     }
     75% {
-        box-shadow: 10px 10px 30px rgba(255, 255, 0, 1); /* Move to bright yellow */
+        box-shadow: 0 0 30px rgba(255, 235, 59, 0.8); /* Soft yellow */
     }
     100% {
-        box-shadow: 0 0 20px rgba(255, 0, 0, 1); /* Back to bright red */
+        box-shadow: 0 0 30px rgba(255, 87, 34, 0.8); /* Back to soft coral */
     }
 }
+
 
 
 /* Screenshots section styles */
@@ -338,24 +341,25 @@ h1 span:nth-child(21) { animation-delay: 1.9s; }
     animation: moveLight 3s linear infinite; /* Apply moving light animation */
 }
 
-/* Moving Light Effect */
+/* Moving light animation */
 @keyframes moveLight {
     0% {
-        box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+        box-shadow: 0 0 30px rgba(255, 87, 34, 0.8); /* Start with a soft coral */
     }
     25% {
-        box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+        box-shadow: 0 0 30px rgba(76, 175, 80, 0.8); /* Soft green */
     }
     50% {
-        box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
+        box-shadow: 0 0 30px rgba(33, 150, 243, 0.8); /* Soft blue */
     }
     75% {
-        box-shadow: 0 0 5px rgba(255, 255, 0, 0.5);
+        box-shadow: 0 0 30px rgba(255, 235, 59, 0.8); /* Soft yellow */
     }
     100% {
-        box-shadow: 0 0 5px rgba(255, 0, 255, 0.5);
+        box-shadow: 0 0 30px rgba(255, 87, 34, 0.8); /* Back to soft coral */
     }
 }
+
 /* Position the carousel control icons */
 .carousel-control-prev,
 .carousel-control-next {
