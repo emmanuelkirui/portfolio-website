@@ -136,8 +136,8 @@ h1 span:nth-child(21) { animation-delay: 1.9s; }
     border-radius: 50%; /* Circular profile picture */
     box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Glow effect for profile picture */
     object-fit: cover; /* Ensures the image covers the circular area without distortion */
-    object-position: center; /* Centers the image inside the container */
-    
+    object-position: center; /* Centers the face */
+    transform: scale(1.1) translateY(10%); /* Zoom and pull the image down slightly */
 }
 
 /* Profile Picture Animation */
@@ -145,6 +145,7 @@ h1 span:nth-child(21) { animation-delay: 1.9s; }
     border-radius: 50%; /* Make it circular */
     animation: moveLight 3s linear infinite; /* Apply moving light animation */
 }
+
 /* Container for the image */
 .profile-pic-container {
     width: 150px;
@@ -157,6 +158,7 @@ h1 span:nth-child(21) { animation-delay: 1.9s; }
     align-items: center;
     justify-content: center;
 }
+
 /* Moving light animation */
 @keyframes moveLight {
     0% {
