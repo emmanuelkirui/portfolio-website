@@ -137,7 +137,7 @@ h1 span:nth-child(21) { animation-delay: 1.9s; }
     box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Glow effect for profile picture */
     object-fit: cover; /* Ensures the image covers the circular area without distortion */
     object-position: center; /* Centers the face */
-    transform: scale(1.1) translateY(7%); /* Zoom and pull the image down slightly */
+    transform: scale(1.1) translateY(6%); /* Zoom and pull the image down slightly */
 }
 
 /* Profile Picture Animation */
