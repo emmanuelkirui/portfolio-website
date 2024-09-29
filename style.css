@@ -111,22 +111,21 @@ h1 span:nth-child(21) { animation-delay: 1.9s; }
 /* Moving light animation */
 @keyframes moveLight {
     0% {
-        box-shadow: 0 0 30px rgba(255, 87, 34, 0.8); /* Start with a soft coral */
+        text-shadow: 0 0 10px rgba(255, 0, 0, 1); /* Start with bright red */
     }
     25% {
-        box-shadow: 0 0 30px rgba(76, 175, 80, 0.8); /* Soft green */
+        text-shadow: 10px 10px 20px rgba(0, 255, 0, 1); /* Bright green */
     }
     50% {
-        box-shadow: 0 0 30px rgba(33, 150, 243, 0.8); /* Soft blue */
+        text-shadow: 20px 20px 30px rgba(0, 0, 255, 1); /* Bright blue */
     }
     75% {
-        box-shadow: 0 0 30px rgba(255, 235, 59, 0.8); /* Soft yellow */
+        text-shadow: 10px 10px 20px rgba(255, 255, 0, 1); /* Bright yellow */
     }
     100% {
-        box-shadow: 0 0 30px rgba(255, 87, 34, 0.8); /* Back to soft coral */
+        text-shadow: 0 0 10px rgba(255, 0, 0, 1); /* Back to bright red */
     }
 }
-
 
 
 
@@ -138,7 +137,7 @@ h1 span:nth-child(21) { animation-delay: 1.9s; }
     box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Glow effect for profile picture */
     object-fit: cover; /* Ensures the image covers the circular area without distortion */
     object-position: center; /* Centers the face */
-    transform: scale(1.1) translateY(7%); /* Zoom and pull the image down slightly */
+    transform: scale(1.1) translateY(6%); /* Zoom and pull the image down slightly */
 }
 
 /* Profile Picture Animation */
@@ -179,6 +178,19 @@ h1 span:nth-child(21) { animation-delay: 1.9s; }
     }
 }
 
+/* Media queries for specific screen size 993px by 914px */
+@media (min-width: 993px) and (max-width: 993px) and (min-height: 914px) and (max-height: 914px) {
+    .profile-pic {
+        width: 130px; /* Adjust the size for 993px by 914px screens */
+        height: 130px; /* Adjust the size for 993px by 914px screens */
+        transform: scale(1.05) translateY(50%); /* Adjust the transform for 993px by 914px screens */
+    }
+
+    .profile-pic-container {
+        width: 130px; /* Adjust the container size for 993px by 914px screens */
+        height: 130px; /* Adjust the container size for 993px by 914px screens */
+    }
+}
 
 
 /* Projects section */
@@ -218,6 +230,9 @@ h1 span:nth-child(21) { animation-delay: 1.9s; }
         font-size: 14px; /* Adjust font size for better readability */
         max-width: 95%; /* Increase width on smaller devices */
         max-height: auto;
+        animation: moveLight 3s linear infinite; /* Apply moving light animation */
+        white-space: pre-wrap; /* Preserve whitespace and line breaks */
+        word-wrap: break-word; /* Allow long words to break to next line */
     }
 }
 
@@ -227,6 +242,9 @@ h1 span:nth-child(21) { animation-delay: 1.9s; }
         font-size: 12px; /* Smaller font size for very small devices */
         max-width: 100%; /* Full width for very small devices */
         max-height: auto;
+        animation: moveLight 3s linear infinite; /* Apply moving light animation */
+        white-space: pre-wrap; /* Preserve whitespace and line breaks */
+        word-wrap: break-word; /* Allow long words to break to next line */
     }
 }
 
@@ -272,22 +290,21 @@ h1 span:nth-child(21) { animation-delay: 1.9s; }
 /* Moving light animation */
 @keyframes moveLight {
     0% {
-        box-shadow: 0 0 30px rgba(255, 87, 34, 0.8); /* Start with a soft coral */
+        box-shadow: 0 0 20px rgba(255, 0, 0, 1); /* Start with bright red */
     }
     25% {
-        box-shadow: 0 0 30px rgba(76, 175, 80, 0.8); /* Soft green */
+        box-shadow: 10px 10px 30px rgba(0, 255, 0, 1); /* Move to bright green */
     }
     50% {
-        box-shadow: 0 0 30px rgba(33, 150, 243, 0.8); /* Soft blue */
+        box-shadow: 20px 20px 40px rgba(0, 0, 255, 1); /* Move to bright blue */
     }
     75% {
-        box-shadow: 0 0 30px rgba(255, 235, 59, 0.8); /* Soft yellow */
+        box-shadow: 10px 10px 30px rgba(255, 255, 0, 1); /* Move to bright yellow */
     }
     100% {
-        box-shadow: 0 0 30px rgba(255, 87, 34, 0.8); /* Back to soft coral */
+        box-shadow: 0 0 20px rgba(255, 0, 0, 1); /* Back to bright red */
     }
 }
-
 
 
 /* Screenshots section styles */
@@ -341,25 +358,24 @@ h1 span:nth-child(21) { animation-delay: 1.9s; }
     animation: moveLight 3s linear infinite; /* Apply moving light animation */
 }
 
-/* Moving light animation */
+/* Moving Light Effect */
 @keyframes moveLight {
     0% {
-        box-shadow: 0 0 30px rgba(255, 87, 34, 0.8); /* Start with a soft coral */
+        box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
     }
     25% {
-        box-shadow: 0 0 30px rgba(76, 175, 80, 0.8); /* Soft green */
+        box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
     }
     50% {
-        box-shadow: 0 0 30px rgba(33, 150, 243, 0.8); /* Soft blue */
+        box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
     }
     75% {
-        box-shadow: 0 0 30px rgba(255, 235, 59, 0.8); /* Soft yellow */
+        box-shadow: 0 0 5px rgba(255, 255, 0, 0.5);
     }
     100% {
-        box-shadow: 0 0 30px rgba(255, 87, 34, 0.8); /* Back to soft coral */
+        box-shadow: 0 0 5px rgba(255, 0, 255, 0.5);
     }
 }
-
 /* Position the carousel control icons */
 .carousel-control-prev,
 .carousel-control-next {
