@@ -148,23 +148,20 @@ $(document).ready(function() {
                     </div>
                 </div>
                 <div class="carousel-item">
-                  <div class="achievement-frame">
-                      <h4>Completed a Diploma in Information Technology at Kisii University!</h4>
-                      <a href="#" class="btn btn-link" onclick="showCertificate()">View Certificate</a>
-                       <!-- Embed the PDF but hide it initially -->
-                   <div id="certificate-viewer" style="display: none; margin-top: 10px;">
-                      <embed src="certificates/MANURAJ KSU.pdf" class="responsive-pdf" type="application/pdf">
-                       </div>
-                  </div>
-              </div>
-              
-              
-              
+                    <div class="achievement-frame">
+                        <h4>Completed a Diploma in Information Technology at Kisii University!</h4>
+                        <div id="certificate-viewer" style="margin-top: 10px;">
+                            <embed src="certificates/MANURAJ KSU.pdf" class="responsive-pdf" type="application/pdf">
+                        </div>
+                    </div>
+                </div>
                 <div class="carousel-item">
                     <div class="achievement-frame">
                         <h4>Worked in IT at NHIF, Kericho!</h4>
                         <p>Gained hands-on experience in managing IT systems and support.</p>
-                        <a href="certificates/Recomentation NHIF.pdf" target="_blank" class="btn btn-link">View Recomentation</a>
+                        <div id="certificate-viewer" style="margin-top: 10px;">
+                            <embed src="certificates/Recomentation NHIF.pdf" class="responsive-pdf" type="application/pdf">
+                        </div>
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -186,12 +183,12 @@ $(document).ready(function() {
                     </div>
                 </div>
             </div>
-  
+
             <!-- Counter Display -->
             <div id="achievementCounter" class="text-center my-3">
                 <span id="currentAchievement">1</span> / <span id="totalAchievements">6</span>
             </div>
-  
+
             <!-- Carousel Controls -->
             <a class="carousel-control-prev" href="#achievementCarousel" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -203,34 +200,36 @@ $(document).ready(function() {
             </a>
         </div>
     </div>
-  </section>
-  <!-- Place your JavaScript code here -->
+</section>
+
+<!-- Place your JavaScript code here -->
 <script>
-  // JavaScript to update the counter as the carousel slides
-  document.addEventListener('DOMContentLoaded', function () {
-      var totalItems = document.querySelectorAll('#achievementCarousel .carousel-item').length;
-      var currentAchievement = document.getElementById('currentAchievement');
-      var totalAchievements = document.getElementById('totalAchievements');
-  
-      // Set the total achievements count on page load
-      totalAchievements.textContent = totalItems;
-  
-      // Function to update the counter
-      var updateCounter = function () {
-          var activeIndex = document.querySelector('#achievementCarousel .carousel-item.active');
-          var currentIndex = Array.prototype.indexOf.call(activeIndex.parentNode.children, activeIndex) + 1;
-          currentAchievement.textContent = currentIndex;
-      };
-  
-      // Listen for carousel slide events
-      $('#achievementCarousel').on('slid.bs.carousel', function () {
-          updateCounter();
-      });
-  
-      // Initial counter update
-      updateCounter();
-  });
-  </script>
+    // JavaScript to update the counter as the carousel slides
+    document.addEventListener('DOMContentLoaded', function () {
+        var totalItems = document.querySelectorAll('#achievementCarousel .carousel-item').length;
+        var currentAchievement = document.getElementById('currentAchievement');
+        var totalAchievements = document.getElementById('totalAchievements');
+
+        // Set the total achievements count on page load
+        totalAchievements.textContent = totalItems;
+
+        // Function to update the counter
+        var updateCounter = function () {
+            var activeIndex = document.querySelector('#achievementCarousel .carousel-item.active');
+            var currentIndex = Array.prototype.indexOf.call(activeIndex.parentNode.children, activeIndex) + 1;
+            currentAchievement.textContent = currentIndex;
+        };
+
+        // Listen for carousel slide events
+        $('#achievementCarousel').on('slid.bs.carousel', function () {
+            updateCounter();
+        });
+
+        // Initial counter update
+        updateCounter();
+    });
+</script>
+
 
   <section id="projects" class="my-5">
     <div class="container">
