@@ -39,10 +39,18 @@
         border: none; /* No border */
     }
     .responsive-iframe {
-    width: 100%; /* Full width */
-    height: 500px; /* Set a height that works for your layout */
-    border: none; /* No border */
+    width: 100%; /* Full width for both documents */
+    height: 500px; /* Adjust the height as needed */
+    border: none; /* Remove iframe border */
 }
+
+@media (max-width: 768px) {
+    .col-md-6 {
+        width: 100%; /* Stack columns on smaller screens */
+        margin-bottom: 20px; /* Add space between the sections */
+    }
+}
+
 
   </style>
    
@@ -553,8 +561,9 @@ gcloud compute networks create labnet --subnet-mode=custom
   <div class="container">
     <h2 class="text-center">Documents</h2>
     <div class="row">
+      <!-- CV Viewer -->
       <div class="col-md-6 text-center">
-        <h3>CV</h3>
+        <h3>Resume</h3>
         <iframe 
           src="https://docs.google.com/gview?url=https://emmanuelkirui.github.io/portfolio-website/Docs/Emmanuel%20Kiprotich%20Kirui%20Resume.docx&embedded=true" 
           class="responsive-iframe" 
@@ -565,8 +574,10 @@ gcloud compute networks create labnet --subnet-mode=custom
         <br>
         <a href="Docs/Emmanuel Kiprotich Kirui Resume.docx" class="btn btn-primary mt-2" target="_blank">Download CV</a>
       </div>
+
+      <!-- Resume Viewer -->
       <div class="col-md-6 text-center">
-        <h3>Resume</h3>
+        <h3>CV</h3>
         <iframe 
           src="https://docs.google.com/gview?url=https://emmanuelkirui.github.io/portfolio-website/Docs/Emmanuel%20Kirui%20CV.docx&embedded=true" 
           class="responsive-iframe" 
@@ -580,6 +591,7 @@ gcloud compute networks create labnet --subnet-mode=custom
     </div>
   </div>
 </section>
+
 
 
 
