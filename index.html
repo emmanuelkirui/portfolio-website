@@ -47,52 +47,80 @@
         border: none; /* No border */
     }
     .spinner {
-    display: none; /* Hide spinner by default */
-    border: 4px solid rgba(255, 255, 255, 0.3); /* Light border */
-    border-top: 4px solid #3498db; /* Blue border */
-    border-radius: 50%; /* Make it circular */
-    width: 40px; /* Size of the spinner */
-    height: 40px; /* Size of the spinner */
-    animation: spin 1s linear infinite; /* Spin animation */
-    position: absolute; /* Position relative to the iframe container */
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Adjust for centering */
+    display: none; /* Hidden by default */
+    border: 4px solid rgba(255, 255, 255, 0.3); /* Light transparent border */
+    border-top: 4px solid #3498db; /* Blue border for spinning */
+    border-radius: 50%; /* Circular shape */
+    width: 40px; /* Width of the spinner */
+    height: 40px; /* Height of the spinner */
+    animation: spin 1.2s ease-in-out infinite; /* Smooth spinning animation */
+    position: absolute; /* Positioned relative to parent */
+    top: 50%; /* Centered vertically */
+    left: 50%; /* Centered horizontally */
+    transform: translate(-50%, -50%); /* Adjust to exact center */
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.7); /* Add subtle glow around spinner */
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% { 
+        transform: translate(-50%, -50%) rotate(0deg); 
+    }
+    100% { 
+        transform: translate(-50%, -50%) rotate(360deg); 
+    }
 }
 
-    .responsive-iframe {
-    width: 100%; /* Full width for both documents */
-    height: 600px; /* Set a fixed height for better visibility */
-    border: none; /* Remove iframe border */
-    overflow: auto; /* Allow scrolling if content overflows */
+/* Adding glowing effect for a more professional touch */
+.spinner::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(52, 152, 219, 0.5); /* Glowing blue light */
+    animation: glow 1.5s ease-in-out infinite alternate; /* Glowing effect animation */
 }
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 30px rgba(52, 152, 219, 1);
+    }
+}
+
+/* Adjustments for the iframe */
+.responsive-iframe {
+    width: 100%; /* Full width for iframe */
+    height: 600px; /* Adjust height */
+    border: none; /* No border for iframe */
+    overflow: auto; /* Scrollable if needed */
+}
+
+/* Wrapper to ensure scrolling in case content overflows */
 .iframe-wrapper {
-    height: 400px; /* Fixed height for wrapper */
-    overflow-y: auto; /* Allow scrolling */
-    position: relative; /* Positioning context */
+    height: 600px; /* Height of the wrapper */
+    overflow-y: auto; /* Enable vertical scrolling */
+    position: relative; /* For spinner positioning */
 }
 
-
-/* Responsive adjustments for smaller screens */
+/* Responsive styles */
 @media (max-width: 768px) {
     .col-md-6 {
-        width: 100%; /* Stack columns on smaller screens */
-        margin-bottom: 20px; /* Add space between the sections */
+        width: 100%; /* Full width for small screens */
+        margin-bottom: 20px; /* Add margin for spacing */
     }
-}
     .responsive-iframe {
-        height: 450px; /* Adjust height for mobile */
+        height: 450px; /* Reduce height for mobile */
     }
     .iframe-wrapper {
-    height: 400px; /* Fixed height for wrapper */
-    overflow-y: auto; /* Allow scrolling */
-    position: relative; /* Positioning context */
+        height: 450px; /* Adjust wrapper height for mobile */
+    }
 }
+
 
 /* Add some space between the About section and the badge */
 #credly-badge-container {
