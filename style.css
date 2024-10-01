@@ -190,6 +190,28 @@ h1 span:nth-child(21) { animation-delay: 1.9s; }
         height: 130px; /* Adjust the container size for 993px by 914px screens */
     }
 }
+    /* Add some space between the About section and the badge */
+#credly-badge-container {
+    margin-top: 30px; /* Adjust the margin to give space */
+    text-align: center; /* Center the badge horizontally */
+}
+
+/* Style the badge iframe for responsiveness */
+#credly-badge-container iframe {
+    max-width: 100%; /* Make the badge responsive */
+    height: auto;
+    border: none; /* Remove border */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add a slight shadow for a polished look */
+    border-radius: 10px; /* Slight rounding of the edges */
+}
+
+/* You can adjust the container width to center the badge nicely */
+#credly-badge-container {
+    width: 100%;
+    max-width: 400px; /* Limit the width of the badge container */
+    margin-left: auto;
+    margin-right: auto;
+}
 
 
 /* Projects section */
