@@ -561,80 +561,96 @@ footer {
 
 /* Brand clearfix styling */
 .brand {
-    display: flex; /* Use flexbox for alignment */
-    align-items: center; /* Center vertically */
-    margin-left: auto; /* Pushes the brand to the right */
+    /*display: flex; /* Use flexbox for alignment */
+    /*align-items: center; /* Center vertically */
+    /*margin-left: auto; /* Pushes the brand to the right */
+    position: relative;
+    z-index: 3;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    
 }
-
-/* Profile Nav styling */
-.ts-profile-nav {
+.brand .logo {
+  box-sizing: border-box;
+  padding: 20px;
+  float: left;
+  display: block;
+  width: 200px;
+}
+@media only screen and (min-width: 992px) {
+  .brand .logo {
+    width: 250px;
+  }
+}
+.brand .logo img {
+  height: 20px;
+}
+.brand .menu-btn {
+  float: right;
+  background: #232d3b;
+  text-align: center;
+  cursor: pointer;
+  color: #fff;
+  padding: 20px 20px;
+}
+@media only screen and (min-width: 992px) {
+  .brand .menu-btn {
+    display: none;
+  }
+}
+.brand .ts-profile-nav {
     list-style: none; /* Remove bullet points */
     padding: 0; /* Remove padding */
     margin: 0; /* Remove margin */
+    float: right;
+    display: none;
 }
-
-/* Account styling */
-.ts-account {
-    position: relative; /* Position relative for absolute child elements */
+.brand .ts-profile-nav li {
+  list-style: none; /* Remove bullet points */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+  float: left;
+  position: relative;
 }
-
-/* Account link styling */
-.ts-account > a {
-    color: #fff; /* White color for account link */
-    text-decoration: none; /* Remove underline */
-    display: flex; /* Use flexbox for alignment */
-    align-items: center; /* Center vertically */
+.brand .ts-profile-nav li a {
+  display: block;
+  padding: 20px;
+  color: #2f3ee3;
 }
-
-/* Avatar styling */
-.ts-avatar {
-    width: 30px; /* Adjust the size as needed */
-    height: 30px; /* Adjust the size as needed */
-    border-radius: 50%; /* Make the image circular */
-    margin-right: 8px; /* Space between image and text */
+.brand .ts-profile-nav li ul {
+  visibility: hidden;
+  opacity: 0;
+  right: 0;
+  position: absolute;
 }
-
-/* Dropdown menu styling */
-.account-dropdown {
-    position: absolute; /* Position dropdown relative to the account item */
-    background-color: rgba(0, 0, 0, 0.9); /* Dark background */
-    display: none; /* Hide by default */
-    list-style: none; /* Remove bullet points */
-    padding: 10px; /* Padding inside dropdown */
-    margin: 0; /* Remove margin */
-    border-radius: 5px; /* Slightly round corners */
-    z-index: 1; /* Ensure it appears above other elements */
+.brand .ts-profile-nav li ul li {
+  float: none;
+  width: 180px;
 }
-
-/* Show dropdown on hover */
-.ts-account:hover .account-dropdown {
-    display: block; /* Show dropdown when hovered */
+.brand .ts-profile-nav li ul li a {
+  padding: 10px 20px;
+  /*background: #222;*/
 }
-
-/* Dropdown item styling */
-.account-dropdown li {
-    margin: 5px 0; /* Space between items */
+.brand .ts-profile-nav .ts-account .fa-angle-down {
+  float: right;
 }
-
-.account-dropdown a {
-    color: #fff; /* White color for dropdown links */
-    text-decoration: none; /* Remove underline */
+.brand .ts-profile-nav .ts-account > a {
+  width: 180px;
+  /*background: #2c3136;*/
 }
-
-.account-dropdown a:hover {
-    text-decoration: underline; /* Underline on hover */
+.brand .ts-profile-nav .ts-account .ts-avatar {
+  border-radius: 50%;
+  height: 28px;
+  margin: -10px 0;
+  margin-right: 10px;
 }
-@media (max-width: 768px) {
-    header {
-        flex-direction: column; /* Stack items vertically on smaller screens */
-        text-align: center; /* Center text on smaller screens */
-    }
-
-    .brand {
-        margin-left: 0; /* Remove left margin for smaller screens */
-    }
-
-    .ts-account > a {
-        justify-content: center; /* Center account link text */
-    }
+.brand .ts-profile-nav .ts-account:hover ul {
+  visibility: visible;
+  opacity: 1;
+}
+@media only screen and (min-width: 992px) {
+  .brand .ts-profile-nav {
+    display: block;
+  }
 }
