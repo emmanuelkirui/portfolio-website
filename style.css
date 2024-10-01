@@ -127,8 +127,6 @@ h1 span:nth-child(21) { animation-delay: 1.9s; }
     }
 }
 
-
-
 /* About section */
 .profile-pic {
     width: 150px; /* Set a fixed width */
@@ -189,33 +187,6 @@ h1 span:nth-child(21) { animation-delay: 1.9s; }
         width: 130px; /* Adjust the container size for 993px by 914px screens */
         height: 130px; /* Adjust the container size for 993px by 914px screens */
     }
-}
-    /* Add some space between the About section and the badge */
-#credly-badge-container {
-    display: flex; /* Use flexbox to center the content */
-    justify-content: center; /* Horizontally center the badge */
-    align-items: center; /* Vertically center the badge (if needed) */
-    margin-top: 30px; /* Space between sections */
-    padding: 10px;
-    animation: moveLight 3s linear infinite; /* Apply moving light animation */
-}
-
-/* Style the badge iframe for responsiveness */
-#credly-badge-container iframe {
-    max-width: 100%; /* Ensure it doesn't exceed the container width */
-    height: auto;
-    border: none; /* Remove any border */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add slight shadow */
-    border-radius: 10px; /* Slight rounding of corners */
-    animation: moveLight 3s linear infinite; /* Apply moving light animation */
-}
-
-/* You can adjust the container width to center the badge nicely */
-#credly-badge-container {
-    width: 100%;
-    max-width: 400px; /* Limit the width of the badge container */
-    margin-left: auto;
-    margin-right: auto;
 }
 
 
@@ -588,88 +559,68 @@ footer {
     }
 }
 
+/* Brand clearfix styling */
 .brand {
-    
-    position: relative;
-    z-index: 3;
-    position: fixed;
-    width: 100%;
-    top: 0;
-  }
-  .brand .logo {
-    box-sizing: border-box;
-    padding: 20px;
-    float: left;
-    display: block;
-    width: 200px;
-  }
-  @media only screen and (min-width: 992px) {
-    .brand .logo {
-      width: 250px;
-    }
-  }
-  .brand .logo img {
-    height: 20px;
-  }
-  .brand .menu-btn {
-    float: right;
-    background: #232d3b;
-    text-align: center;
-    cursor: pointer;
-    color: #fff;
-    padding: 20px 20px;
-  }
-  @media only screen and (min-width: 992px) {
-    .brand .menu-btn {
-      display: none;
-    }
-  }
-.brand .ts-profile-nav {
-    float: right;
-    display: none;
-  }
-  .brand .ts-profile-nav li {
-    float: left;
-    position: relative;
-  }
-  .brand .ts-profile-nav li a {
-    display: block;
-    padding: 20px;
-    color: #fff;
-  }
-  .brand .ts-profile-nav li ul {
-    visibility: hidden;
-    opacity: 0;
-    right: 0;
-    position: absolute;
-  }
-  .brand .ts-profile-nav li ul li {
-    float: none;
-    width: 180px;
-  }
-  .brand .ts-profile-nav li ul li a {
-    padding: 10px 20px;
-    background: #222;
-  }
-  .brand .ts-profile-nav .ts-account .fa-angle-down {
-    float: right;
-  }
-  .brand .ts-profile-nav .ts-account > a {
-    width: 180px;
-    background: #2c3136;
-  }
-  .brand .ts-profile-nav .ts-account .ts-avatar {
-    border-radius: 50%;
-    height: 28px;
-    margin: -10px 0;
-    margin-right: 10px;
-  }
-  .brand .ts-profile-nav .ts-account:hover ul {
-    visibility: visible;
-    opacity: 1;
-  }
-  @media only screen and (min-width: 992px) {
-    .brand .ts-profile-nav {
-      display: block;
-    }
-  }
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center vertically */
+    margin-left: auto; /* Pushes the brand to the right */
+}
+
+/* Profile Nav styling */
+.ts-profile-nav {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+/* Account styling */
+.ts-account {
+    position: relative; /* Position relative for absolute child elements */
+}
+
+/* Account link styling */
+.ts-account > a {
+    color: #fff; /* White color for account link */
+    text-decoration: none; /* Remove underline */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center vertically */
+}
+
+/* Avatar styling */
+.ts-avatar {
+    width: 30px; /* Adjust the size as needed */
+    height: 30px; /* Adjust the size as needed */
+    border-radius: 50%; /* Make the image circular */
+    margin-right: 8px; /* Space between image and text */
+}
+
+/* Dropdown menu styling */
+.account-dropdown {
+    position: absolute; /* Position dropdown relative to the account item */
+    background-color: rgba(0, 0, 0, 0.9); /* Dark background */
+    display: none; /* Hide by default */
+    list-style: none; /* Remove bullet points */
+    padding: 10px; /* Padding inside dropdown */
+    margin: 0; /* Remove margin */
+    border-radius: 5px; /* Slightly round corners */
+    z-index: 1; /* Ensure it appears above other elements */
+}
+
+/* Show dropdown on hover */
+.ts-account:hover .account-dropdown {
+    display: block; /* Show dropdown when hovered */
+}
+
+/* Dropdown item styling */
+.account-dropdown li {
+    margin: 5px 0; /* Space between items */
+}
+
+.account-dropdown a {
+    color: #fff; /* White color for dropdown links */
+    text-decoration: none; /* Remove underline */
+}
+
+.account-dropdown a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
