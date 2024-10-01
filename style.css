@@ -624,3 +624,17 @@ footer {
 .account-dropdown a:hover {
     text-decoration: underline; /* Underline on hover */
 }
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        text-align: center; /* Center text on smaller screens */
+    }
+
+    .brand {
+        margin-left: 0; /* Remove left margin for smaller screens */
+    }
+
+    .ts-account > a {
+        justify-content: center; /* Center account link text */
+    }
+}
