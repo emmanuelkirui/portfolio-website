@@ -169,7 +169,8 @@
             </ul>
         </li>
     </ul>
-</div> 
+</div>
+
   <main class="flex-grow-1">
   
     <nav class="navbar navbar-expand-lg navbar-dark">
@@ -228,11 +229,9 @@ $(document).ready(function() {
     
     </div>
   </section>
-  <section>
-      <!-- Add the badge right below the About section -->
+    <!-- Add the badge right below the About section -->
 <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="c45a92ac-2f59-4316-814b-90195f482734" data-share-badge-host="https://www.credly.com"></div>
 <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-  </section>
   <section id="achievements" class="my-5">
     <div class="container">
         <h2 class="text-center">Latest Achievements</h2>
@@ -547,46 +546,53 @@ $(document).ready(function() {
 
   <section id="samples" class="my-5">
     <div class="container">
-      <h2 class="text-center">Sample Code</h2>
+      <h2 class="text-center mb-4">Sample Code</h2>
       <div id="sampleCodeCarousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
+          <!-- Carousel Item 1 -->
           <div class="carousel-item active">
-            <div class="sample-code">
-              <pre>
-# Sample Python Code 1
-def hello_world():
-    return "Hello, World!"
-
-print(hello_world())
+            <div class="sample-code bg-light p-3 rounded">
+              <pre class="code-block">
+  # Sample Python Code 1
+  def hello_world():
+      return "Hello, World!"
+  
+  print(hello_world())
               </pre>
-              <h4>Output:</h4>
-              <pre id="output1"></pre>
+              <h4 class="mt-3">Output:</h4>
+              <pre id="output1" class="output-block bg-dark text-white p-2 rounded"></pre>
             </div>
           </div>
+  
+          <!-- Carousel Item 2 -->
           <div class="carousel-item">
-            <div class="sample-code">
-              <pre>
-# Sample Python Code 2
-def add_numbers(a, b):
-    return a + b
-
-print(add_numbers(5, 3))
+            <div class="sample-code bg-light p-3 rounded">
+              <pre class="code-block">
+  # Sample Python Code 2
+  def add_numbers(a, b):
+      return a + b
+  
+  print(add_numbers(5, 3))
               </pre>
-              <h4>Output:</h4>
-              <pre id="output2"></pre>
+              <h4 class="mt-3">Output:</h4>
+              <pre id="output2" class="output-block bg-dark text-white p-2 rounded"></pre>
             </div>
           </div>
+  
+          <!-- Carousel Item 3 -->
           <div class="carousel-item">
-          <div class="sample-code">
-            <pre>
-# Sample Cloud Commands
-gcloud compute networks create labnet --subnet-mode=custom
-            </pre>
-            <h4>Output:</h4>
-            <pre id="output3">This Command create a custom mode network called  labnet</pre>
-          </div>
+            <div class="sample-code bg-light p-3 rounded">
+              <pre class="code-block">
+  # Sample Cloud Commands
+  gcloud compute networks create labnet --subnet-mode=custom
+              </pre>
+              <h4 class="mt-3">Output:</h4>
+              <pre id="output3" class="output-block bg-dark text-white p-2 rounded">This Command creates a custom mode network called labnet</pre>
+            </div>
           </div>
         </div>
+  
+        <!-- Carousel controls -->
         <a class="carousel-control-prev" href="#sampleCodeCarousel" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="sr-only">Previous</span>
@@ -596,10 +602,14 @@ gcloud compute networks create labnet --subnet-mode=custom
           <span class="sr-only">Next</span>
         </a>
       </div>
-      <button class="btn btn-success mt-3" onclick="runCode()">Run Code</button>
+  
+      <!-- Run Code Button -->
+      <div class="text-center mt-4">
+        <button class="btn btn-success" onclick="runCode()">Run Code</button>
+      </div>
     </div>
   </section>
-
+  
   <section id="screenshots" class="my-5">
     <div class="container">
         <h2 class="text-center">Screenshots</h2>
