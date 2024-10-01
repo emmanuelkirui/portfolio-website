@@ -192,18 +192,21 @@ h1 span:nth-child(21) { animation-delay: 1.9s; }
 }
     /* Add some space between the About section and the badge */
 #credly-badge-container {
-    margin-top: 30px; /* Adjust the margin to give space */
-    text-align: center; /* Center the badge horizontally */
+    display: flex; /* Use flexbox to center the content */
+    justify-content: center; /* Horizontally center the badge */
+    align-items: center; /* Vertically center the badge (if needed) */
+    margin-top: 30px; /* Space between sections */
+    padding: 10px;
     animation: moveLight 3s linear infinite; /* Apply moving light animation */
 }
 
 /* Style the badge iframe for responsiveness */
 #credly-badge-container iframe {
-    max-width: 100%; /* Make the badge responsive */
+    max-width: 100%; /* Ensure it doesn't exceed the container width */
     height: auto;
-    border: none; /* Remove border */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add a slight shadow for a polished look */
-    border-radius: 10px; /* Slight rounding of the edges */
+    border: none; /* Remove any border */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add slight shadow */
+    border-radius: 10px; /* Slight rounding of corners */
     animation: moveLight 3s linear infinite; /* Apply moving light animation */
 }
 
