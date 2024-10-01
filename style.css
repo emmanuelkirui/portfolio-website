@@ -219,8 +219,8 @@ h1 span:nth-child(21) { animation-delay: 1.9s; }
     margin: 0 auto; /* Center the code block */
     text-align: center;
 }
-/* Code block styling */
-.code-block {
+  /* Code block styling */
+  .code-block {
     background-color: #f8f9fa;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -228,6 +228,8 @@ h1 span:nth-child(21) { animation-delay: 1.9s; }
     white-space: pre-wrap;
     word-wrap: break-word;
     font-family: 'Courier New', Courier, monospace;
+    overflow-x: auto; /* Horizontal scroll for long lines */
+    max-width: 100%; /* Ensure it doesn't exceed container width */
   }
 
   /* Output block styling */
@@ -235,42 +237,22 @@ h1 span:nth-child(21) { animation-delay: 1.9s; }
     font-family: 'Courier New', Courier, monospace;
     white-space: pre-wrap;
     word-wrap: break-word;
+    overflow-x: auto; /* Horizontal scroll for long output */
+    max-width: 100%; /* Ensure output stays within container */
   }
 
-  /* Media query for small screens */
+  /* Improve visibility on smaller screens */
   @media (max-width: 768px) {
     .code-block {
       font-size: 14px;
+      padding: 10px;
     }
     .output-block {
       font-size: 14px;
+      padding: 10px;
     }
   }
 
-/* Responsive styling for smaller screens */
-@media (max-width: 768px) {
-    .sample-code {
-        padding: 10px; /* Slightly reduce padding on smaller screens */
-        font-size: 14px; /* Adjust font size for better readability */
-        max-width: 95%; /* Increase width on smaller devices */
-        max-height: auto;
-        animation: moveLight 3s linear infinite; /* Apply moving light animation */
-        white-space: pre-wrap; /* Preserve whitespace and line breaks */
-        word-wrap: break-word; /* Allow long words to break to next line */
-    }
-}
-
-@media (max-width: 576px) {
-    .sample-code {
-        padding: 8px; /* Further reduce padding for very small devices */
-        font-size: 12px; /* Smaller font size for very small devices */
-        max-width: 100%; /* Full width for very small devices */
-        max-height: auto;
-        animation: moveLight 3s linear infinite; /* Apply moving light animation */
-        white-space: pre-wrap; /* Preserve whitespace and line breaks */
-        word-wrap: break-word; /* Allow long words to break to next line */
-    }
-}
 
 
 /* Skills section styles */
