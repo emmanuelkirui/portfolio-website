@@ -21,7 +21,6 @@ body {
 html {
     scroll-behavior: smooth; /* Enables smooth scrolling */
 }
-
 main {
     flex-grow: 1; /* Allows the main content to grow and take available space */
   }
@@ -250,10 +249,12 @@ h1 span:nth-child(21) { animation-delay: 1.9s; }
     .code-block {
       font-size: 14px;
       padding: 10px;
+      animation: moveLight 3s linear infinite; /* Apply moving light animation */
     }
     .output-block {
       font-size: 14px;
       padding: 10px;
+      animation: moveLight 3s linear infinite; /* Apply moving light animation */
     }
   }
 
@@ -525,6 +526,36 @@ footer {
   .btn-primary:hover {
     background-color: #0056b3; /* Darker shade on hover */
   }
+  .btn-secondary {
+    background-color: #88a7e7; /* Bootstrap primary color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin: 10px 15px 10px 0; /* Adds spacing between the buttons */
+    animation: moveLight 3s linear infinite; /* Apply moving light animation */
+    
+  }
+  
+  .btn-secondary:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+  }
+  .btn-danger {
+    background-color: #f82201; /* Bootstrap primary color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin: 10px 15px 10px 0; /* Adds spacing between the buttons */
+    animation: moveLight 3s linear infinite; /* Apply moving light animation */
+    
+  }
+  
+  .btn-danger:hover {
+    background-color: #630909; /* Darker shade on hover */
+  }
   /* General modal styles */
 .modal-dialog {
     max-width: 100%; /* Ensure modal takes up full width on smaller screens */
@@ -657,6 +688,7 @@ footer {
   height: 28px;
   margin: -10px 0;
   margin-right: 10px;
+  animation: moveLight 3s linear infinite; /* Apply moving light animation */
 }
 .brand .ts-profile-nav .ts-account:hover ul {
   visibility: visible;
