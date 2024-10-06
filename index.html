@@ -167,12 +167,44 @@
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
+  #skills {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+  }
+  #skills h2 {
+    font-weight: bold;
+    color: #343a40;
+  }
+  .card {
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    transition: transform 0.3s;
+  }
+  .card:hover {
+    transform: scale(1.05);
+  }
+  .card-header {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  .list-inline-item {
+    display: block;
+    padding: 5px 0;
+  }
 
 
   </style>
    
 </head>
 <body class="d-flex flex-column min-vh-100">
+    <div class="switch-wrapper">
+        <div class="sun"></div> 
+        <div class="toggle-wrapper">
+            <input type="checkbox" id="switch" />
+            <label for="switch" id="switch1">Toggle</label> 
+        </div>
+        <div class="moon"></div>
+    </div>
   <header class="bg-dark text-white text-center py-3">
 
     <h1>
@@ -201,15 +233,6 @@
       <span>u</span>
       <span>i</span>
   </h1>
-  <div class="switch-wrapper"> 
-</a>
-<div class="sun"></div> 
-<div class="toggle-wrapper">
-    <input type="checkbox" id="switch"  />
-    <label for="switch" id="switch1" >Toggle</label> 
-</div>
-<div class="moon"></div>
-</div>
   <div class="brand clearfix ml-auto"> <!-- Added 'ml-auto' for right alignment -->
     <ul class="ts-profile-nav">
         <li class="ts-account">
@@ -477,99 +500,89 @@ $(document).ready(function() {
 </section>
 <section id="skills" class="my-5 text-center">
     <div class="container">
-      <h2>Skills</h2>
-      <ul class="list-inline">
-        <li class="list-inline-item">Cybersecurity</li>
-        <li class="list-inline-item">Cloud Backup</li>
-        <li class="list-inline-item">Cloud Computing</li>
-        <li class="list-inline-item">Cloud Security</li>
-        <li class="list-inline-item">Compliance Lifecycle</li>
-        <li class="list-inline-item">Cyber Security Compliance</li>
-        <li class="list-inline-item">Cyber Threat Intelligence</li>
-        <li class="list-inline-item">Data Protection</li>
-        <li class="list-inline-item">Disaster Recovery</li>
-        <li class="list-inline-item">Google Cloud</li>
-        <li class="list-inline-item">Identity and Access Management (IAM)</li>
-        <li class="list-inline-item">Network Security</li>
-        <li class="list-inline-item">Threat Detection</li>
-        <li class="list-inline-item">Python Programming</li>
-        <li class="list-inline-item">Motion Graphics Design</li>
-        <li class="list-inline-item">Web Development</li>
-        <li class="list-inline-item">Artificial Intelligence (AI)</li>
-        <li class="list-inline-item">Gemini APIs</li>
-        <li class="list-inline-item">Generative AI</li>
-        <li class="list-inline-item">Prompt Engineering</li>
-      </ul>
-    </div>
-  </section>
-  <section class="section skills" data-aos="slide-up">
-    <div class="section_title">skills</div>
-    
-    <div class="card-body">
-    <div class="section_content">
-        <div class="skillz">
-            <div class="skillz_category"> 
-                <div class="skillz_category_label">
-                    Languages
+        <h2 class="mb-4">Skills</h2>
+        <div class="row justify-content-center">
+
+            <!-- Core Skills Card -->
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h4>Core Skills</h4>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li class="list-inline-item">Cybersecurity</li>
+                            <li class="list-inline-item">Cloud Backup</li>
+                            <li class="list-inline-item">Cloud Computing</li>
+                            <li class="list-inline-item">Cloud Security</li>
+                            <li class="list-inline-item">Compliance Lifecycle</li>
+                            <li class="list-inline-item">Data Protection</li>
+                            <li class="list-inline-item">Disaster Recovery</li>
+                            <li class="list-inline-item">Google Cloud</li>
+                            <li class="list-inline-item">IAM</li>
+                        </ul>
+                    </div>
                 </div>
-                <ul>
-                     <li class="skillz_category_item">PHP</li>
-                     <li class="skillz_category_item">JAVASCRIPT(ES5)(ES6)</li> 
-                     <li class="skillz_category_item">CSS3</li>
-                     <li class="skillz_category_item">HTML5</li>
-                     <li class="skillz_category_item">JSON</li>
-                     <li class="skillz_category_item">AJAX</li>
-                     <li class="skillz_category_item">CSS</li>
-                     <li class="skillz_category_item">Visual Basic</li>
-                     <li class="skillz_category_item">C/C++</li>
-                     <li class="skillz_category_item">Python3</li>
-                </ul> 
             </div>
 
-            <div class="skillz_category"> 
-                <div class="skillz_category_label">
-                    frameworks
+            <!-- Programming Languages Card -->
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card">
+                    <div class="card-header bg-success text-white">
+                        <h4>Programming Languages</h4>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li class="list-inline-item">PHP</li>
+                            <li class="list-inline-item">JavaScript (ES5/ES6)</li>
+                            <li class="list-inline-item">CSS3</li>
+                            <li class="list-inline-item">HTML5</li>
+                            <li class="list-inline-item">C/C++</li>
+                            <li class="list-inline-item">Python3</li>
+                            <li class="list-inline-item">AJAX</li>
+                        </ul>
+                    </div>
                 </div>
-                <ul>
-                    <li class="skillz_category_item">RUBY ON RAILS</li>
-                    <li class="skillz_category_item">SINATRA</li>
-                    <li class="skillz_category_item">JQUERY</li>
-                    <li class="skillz_category_item">API</li>
-                    <li class="skillz_category_item">BOOTSTRAP4</li>
-                    <li class="skillz_category_item">UJS</li> 
-                    <li class="skillz_category_item">MATERIALIZE</li>
-                    <li class="skillz_category_item">UIKIT</li>
-                </ul>
             </div>
 
-            <div class="skillz_category"> 
-                <div class="skillz_category_label">
-                    Tools
+            <!-- Frameworks & Tools Card -->
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card">
+                    <div class="card-header bg-warning text-white">
+                        <h4>Frameworks & Tools</h4>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li class="list-inline-item">Ruby on Rails</li>
+                            <li class="list-inline-item">Bootstrap4</li>
+                            <li class="list-inline-item">jQuery</li>
+                            <li class="list-inline-item">Materialize</li>
+                            <li class="list-inline-item">UIkit</li>
+                            <li class="list-inline-item">Git & GitHub</li>
+                            <li class="list-inline-item">Heroku</li>
+                        </ul>
+                    </div>
                 </div>
-                <ul>
-                    <li class="skillz_category_item">POSTGRESQL</li>
-                    <li class="skillz_category_item">SQLITE3</li>
-                    <li class="skillz_category_item">MYSQL</li>
-                    <li class="skillz_category_item">GIT & GITHUB</li>
-                    <li class="skillz_category_item">HEROKU</li>
-                    <li class="skillz_category_item">WAMP SERVER</li>	
-                </ul>
             </div>
-        
-            <div class="skillz_category"> 
-                <div class="skillz_category_label">
-                    Design
+
+            <!-- Design Skills Card -->
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card">
+                    <div class="card-header bg-info text-white">
+                        <h4>Design Skills</h4>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li class="list-inline-item">After Effects</li>
+                            <li class="list-inline-item">Photoshop</li>
+                            <li class="list-inline-item">Illustrator</li>
+                            <li class="list-inline-item">FL Studio</li>
+                            <li class="list-inline-item">Audition</li>
+                        </ul>
+                    </div>
                 </div>
-                <ul>
-                    <li class="skillz_category_item">After Effects</li>
-                    <li class="skillz_category_item">PHOTOSHOP</li>
-                    <li class="skillz_category_item">Illustrator</li>
-                    <li class="skillz_category_item">Fl Studio</li>
-                    <li class="skillz_category_item">Audition</li>
-                </ul>
             </div>
         </div>
-    </div>
     </div>
 </section>
 <section class="section experience">
@@ -1223,5 +1236,30 @@ document.addEventListener('DOMContentLoaded', function () {
           }
       }
       </script>
+<script>
+    const switchInput = document.getElementById('switch');
+    const body = document.body;
+
+    // Check for saved user preference, if any
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme === 'dark') {
+        body.classList.add('dark-mode');
+        switchInput.checked = true; // Set the checkbox to checked for dark mode
+    }
+
+    // Toggle dark/light mode
+    switchInput.addEventListener('change', () => {
+        body.classList.toggle('dark-mode');
+
+        // Save preference in local storage
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('theme', 'dark');
+        } else {
+            localStorage.setItem('theme', 'light');
+        }
+    });
+</script>
+
+    
 </body>
 </html>
