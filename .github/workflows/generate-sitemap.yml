@@ -1,0 +1,29 @@
+name: Generate Sitemap
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  generate-sitemap:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Generate Sitemap
+        run: |
+          curl -s https://www.xml-sitemaps.com/ | grep -o 'https://[^"]*' > sitemap.xml
+      
+      - name: Commit and Push sitemap.xml
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add sitemap.xml
+          git commit -m "Update sitemap"
+          git push
