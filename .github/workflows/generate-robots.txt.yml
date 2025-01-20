@@ -1,0 +1,29 @@
+name: Generate Robots.txt
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  generate-robots:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Create robots.txt
+        run: |
+          echo "User-agent: *" > robots.txt
+          echo "Disallow: /private/" >> robots.txt
+          echo "Allow: /" >> robots.txt
+          echo "Sitemap: https://emmanuelkirui.github.io/sitemap.xml" >> robots.txt
+      
+      - name: Commit and Push robots.txt
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add robots.txt
+          git commit -m "Update robots.txt"
+          git push
